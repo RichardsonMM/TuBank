@@ -33,10 +33,37 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int _pageIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _pageIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        iconSize: 28,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.import_export_sharp), label: ""),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.attach_money_sharp), label: ""),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_bag_outlined), label: ""),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.sports_soccer_sharp), label: ""),
+        ],
+        currentIndex: _pageIndex,
+        selectedItemColor: kPrimaryColor,
+        onTap: _onItemTapped,
+      ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
@@ -104,6 +131,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     ItemsAcao(
                       icon: Icon(Icons.phone_android_rounded),
                       name: "Recarga",
+                    ),
+                    ItemsAcao(
+                      icon: Icon(Icons.favorite_border),
+                      name: "Doação",
                     ),
                   ],
                 ),

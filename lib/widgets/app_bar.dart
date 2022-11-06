@@ -62,7 +62,10 @@ class app_bar extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 25, vertical: 25),
             child: Text(
               "Olá, Richardson",
-              style: TextStyle(color: kWhiteColor, fontSize: 20),
+              style: TextStyle(
+                  color: kWhiteColor,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w400),
             ),
           ),
         )

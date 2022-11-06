@@ -16,6 +16,14 @@ class Page4 extends StatefulWidget {
 class _Page4State extends State<Page4> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    Size size = MediaQuery.of(context).size;
+    return Column(
+      children: [
+        short_app_bar(size: size),
+        Center(
+          child: Text("Página 4"),
+        )
+      ],
+    );
   }
 }

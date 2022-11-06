@@ -30,9 +30,10 @@ class _Page1State extends State<Page1> {
                 child: Text(
                   "Conta",
                   style: TextStyle(
-                      color: Color.fromARGB(255, 33, 33, 33),
-                      fontWeight: FontWeight.w500,
-                      fontSize: 20),
+                    color: Color.fromARGB(255, 33, 33, 33),
+                    fontWeight: FontWeight.w600,
+                    fontSize: 20,
+                  ),
                 ),
               ),
               Spacer(),

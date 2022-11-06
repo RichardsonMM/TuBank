@@ -20,13 +20,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _pageIndex = 0;
 
-  final screens = [
-    Page1(),
-    Page2(),
-    Page3(),
-    Page4(),
-  ];
-
   void _onItemTapped(int index) {
     setState(() {
       _pageIndex = index;
@@ -35,6 +28,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final screens = [
+      Page1(),
+      Page2(),
+      Page3(),
+      Page4(),
+    ];
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(

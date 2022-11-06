@@ -21,10 +21,8 @@ class _Page2State extends State<Page2> {
         short_app_bar(size: size),
         Container(
           margin: EdgeInsets.symmetric(horizontal: 25, vertical: 20),
-          //padding: EdgeInsets.all(0),
           height: size.height * .33,
           width: size.width,
-          //color: Colors.black,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -142,17 +140,18 @@ class _Page2State extends State<Page2> {
                     color: kGrayColor, borderRadius: BorderRadius.circular(15)),
                 child: Row(
                   children: const [
-                    Icon(Icons.animation_outlined),
+                    Icon(Icons.favorite_border_sharp),
                     SizedBox(width: 15),
                     Text(
-                      "Caixinhas",
+                      "Seguro vida",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     Spacer(),
                     Text(
-                      "R\$ 0,00",
+                      "Conhecer",
                       textAlign: TextAlign.end,
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: kPrimaryColor),
                     ),
                   ],
                 ),
@@ -165,18 +164,19 @@ class _Page2State extends State<Page2> {
                     color: kGrayColor, borderRadius: BorderRadius.circular(15)),
                 child: Row(
                   children: const [
-                    Icon(Icons.bar_chart_sharp),
+                    Icon(Icons.phone_android_outlined),
                     SizedBox(width: 15),
                     Text(
-                      "Investimentos",
+                      "Seguro celular",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     //SizedBox(width: 131),
                     Spacer(),
                     Text(
-                      "R\$ 0,00",
+                      "Conhecer",
                       textAlign: TextAlign.end,
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: kPrimaryColor),
                     ),
                   ],
                 ),

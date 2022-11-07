@@ -21,7 +21,7 @@ class app_bar extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.symmetric(
-              horizontal: 15, vertical: size.height * 0.095),
+              horizontal: 15, vertical: size.height * 0.093),
           child: ClipOval(
             child: Image.asset(
               "assets/images/fotominha.jpg",

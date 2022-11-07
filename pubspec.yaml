@@ -72,7 +72,7 @@ flutter:
       fonts:
         - asset: assets/fonts/Roboto-Regular.ttf
         - asset: assets/fonts/Roboto-Bold.ttf
-       #   style: regular
+          style: normal
       
   #
   # For details regarding fonts from package dependencies,

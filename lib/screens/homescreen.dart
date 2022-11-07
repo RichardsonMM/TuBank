@@ -60,9 +60,9 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-Route _createRoute() {
+Route _createRoute(Page()) {
   return PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => const Page2(),
+    pageBuilder: (context, animation, secondaryAnimation) => Page(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(0.0, 1.0);
       const end = Offset.zero;

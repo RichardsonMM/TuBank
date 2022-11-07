@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:tubank/screens/areapix.dart';
 
 import '../constants.dart';
 import '../widgets/app_bar.dart';
@@ -31,8 +33,9 @@ class _Page1State extends State<Page1> {
                   "Conta",
                   style: TextStyle(
                     color: Color.fromARGB(255, 33, 33, 33),
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w500,
                     fontSize: 20,
+                    fontFamily: 'Roboto',
                   ),
                 ),
               ),
@@ -66,34 +69,46 @@ class _Page1State extends State<Page1> {
             child: Container(
               margin: EdgeInsets.symmetric(vertical: 30, horizontal: 25),
               child: Row(
-                children: const [
+                children: [
                   ItemsAcao(
                     icon: Icon(Icons.pix),
                     name: "Área Pix",
+                    press: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const AreaPix()));
+                    },
                   ),
                   ItemsAcao(
                     icon: Icon(Icons.line_weight),
                     name: "Pagar",
+                    press: () {},
                   ),
                   ItemsAcao(
                     icon: Icon(Icons.attach_money_rounded),
                     name: "Transferir",
+                    press: () {},
                   ),
                   ItemsAcao(
                     icon: Icon(Icons.money_off),
                     name: "Depositar",
+                    press: () {},
                   ),
                   ItemsAcao(
                     icon: Icon(Icons.phone_android_rounded),
                     name: "Recarga",
+                    press: () {},
                   ),
                   ItemsAcao(
                     icon: Icon(Icons.favorite_border),
                     name: "Doação",
+                    press: () {},
                   ),
                   ItemsAcao(
                     icon: Icon(Icons.language_sharp),
                     name: "T.Internac.",
+                    press: () {},
                   ),
                 ],
               ),
